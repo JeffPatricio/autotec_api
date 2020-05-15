@@ -6,6 +6,7 @@ class SessionController {
     this.utils = createUtils();
   }
 
+
   create(req, res) {
     const { cpf, password } = req.body;
 

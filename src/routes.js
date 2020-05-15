@@ -18,7 +18,7 @@ class Routes {
 
   configurePublicRoutes() {
     this.routes.get('/', (req, res) => res.send('Server running'));
-    this.routes.post('/session', this.sessionController.create)
+    this.routes.post('/session', (req, res) => this.sessionController.create(req, res))
   }
 
   configureAuthenticatedRoutes() {
