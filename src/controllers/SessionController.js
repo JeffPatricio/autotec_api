@@ -10,7 +10,7 @@ class SessionController {
   create(req, res) {
     const { cpf, password } = req.body;
 
-    if (!cpf || !password || !this.utils.validateCpf(cpf) || cpf !== '11111111111' || password !== '123456')
+    if (!cpf || !password || !this.utils.validateCpf(cpf) || cpf !== '76621002009' || password !== '123456')
       return res.status(400).json({ success: false, code: 'invalid_data', message: 'CPF ou senha inválidos' });
 
     return res.status(200).json({
