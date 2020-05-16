@@ -22,7 +22,8 @@ class SessionController {
   read(req, res) {
     return res.json({
       success: true,
-      message: 'Usuário autenticado'
+      message: 'Usuário autenticado',
+      user: { name: 'Jhonny Cooper', photo: 'https://blog.m2br.com/wp-content/uploads/2018/10/analista_de_marketing_digital.jpg' }
     });
   }
 }
