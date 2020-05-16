@@ -6,7 +6,6 @@ class SessionController {
     this.utils = createUtils();
   }
 
-
   create(req, res) {
     const { cpf, password } = req.body;
 
@@ -15,7 +14,7 @@ class SessionController {
 
     return res.json({
       success: true,
-      user: { nome: 'Jhonny Cooper', foto: 'https://blog.hotmart.com/blog/2019/01/BLOG_Perfil-empreendedor.png' },
+      user: { nome: 'Jhonny Cooper', foto: 'https://blog.m2br.com/wp-content/uploads/2018/10/analista_de_marketing_digital.jpg' },
       token: '5gbahb22ska52rhkiuta1096vg3ht7vj34k2m4234234'
     });
   }
