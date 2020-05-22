@@ -13,10 +13,10 @@ class App {
   }
 
   middlewares() {
-    this.server.use(helmet());
     this.server.use(cors());
     this.server.use(this.logMiddleware.requestLog);
     this.server.use(express.json());
+    this.server.use(helmet());
   }
 
   routes() {
