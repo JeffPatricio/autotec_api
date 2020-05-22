@@ -17,6 +17,7 @@ class App {
     this.server.use(this.logMiddleware.requestLog);
     this.server.use(express.json());
     this.server.use(helmet());
+    this.server.disable('x-powered-by');
   }
 
   routes() {
