@@ -1,4 +1,5 @@
 const express = require('express');
+const helmet = require('helmet');
 const cors = require('cors');
 const { createRoutes } = require('./routes');
 const { createLogMiddleware } = require('./middlewares/Log');
@@ -12,9 +13,10 @@ class App {
   }
 
   middlewares() {
+    this.server.use(helmet());
+    this.server.use(cors());
     this.server.use(this.logMiddleware.requestLog);
     this.server.use(express.json());
-    this.server.use(cors());
   }
 
   routes() {
